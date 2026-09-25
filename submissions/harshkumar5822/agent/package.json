@@ -1,0 +1,15 @@
+{
+  "name": "pack-manager-agent",
+  "version": "1.0.0",
+  "description": "Headless AI Agent for Pack Manager (Step 03 of 5)",
+  "main": "pack-agent.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node cli.js",
+    "serve": "node server.js",
+    "test-sample": "node cli.js --csv ../../../data/pack_sample.csv"
+  },
+  "keywords": ["cube-buildathon", "pack-manager", "vision-ai", "commerce-context"],
+  "author": "Harsh Kumar (harshkumar5822)",
+  "license": "MIT"
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Manager · Step 03 · Commerce Context Bench UI</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Navbar -->
+    <header class="navbar">
+      <div class="brand">
+        <div class="brand-logo">📦</div>
+        <div class="brand-text">
+          <h1>PACK MANAGER <span class="stage-tag">STEP 03</span></h1>
+          <p class="subtitle">Outbound Carton Vision Audit & Evidence Engine</p>
+        </div>
+      </div>
+      <div class="nav-controls">
+        <div class="tenant-selector">
+          <label for="tenantSelect">Tenant (Rule 1):</label>
+          <select id="tenantSelect">
+            <option value="org_demo_alpha">org_demo_alpha (Alpha Corp)</option>
+            <option value="org_demo_bravo">org_demo_bravo (Bravo 3PL)</option>
+          </select>
+        </div>
+        <div class="operator-badge">
+          <span class="pulse-dot"></span>
+          <span>Bench OP-882</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Split Layout -->
+    <main class="main-layout">
+      <!-- Left Sidebar: Unit Selector & Sample Fixtures -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Pack Fixtures</h2>
+          <span class="count-badge" id="unitCount">29 Units</span>
+        </div>
+        <div class="search-box">
+          <input type="text" id="unitSearch" placeholder="Search Unit ID or SKU...">
+        </div>
+        <div class="unit-list" id="unitList">
+          <!-- Populated by JS -->
+        </div>
+      </aside>
+
+      <!-- Center Workspace: Bench Camera & Vision Audit -->
+      <section class="workspace">
+        <div class="workspace-header">
+          <div class="unit-info">
+            <h2 id="activeUnitId">Select a Unit</h2>
+            <span class="channel-badge" id="activeChannel">channel_id</span>
+            <span class="order-badge" id="activeOrderId">ORD-0000</span>
+          </div>
+          <div class="verdict-banner" id="verdictBanner">
+            <span class="verdict-icon">⌛</span>
+            <span class="verdict-title">READY FOR CAPTURE</span>
+          </div>
+        </div>
+
+        <!-- Vision Stage & Camera Stream -->
+        <div class="vision-stage">
+          <div class="photo-container" id="photoContainer">
+            <div class="carton-overlay" id="cartonOverlay">
+              <div class="scanner-line"></div>
+              <div class="bounding-box-demo" id="boundingBoxes">
+                <!-- Bounding boxes injected dynamically -->
+              </div>
+            </div>
+            <div class="camera-placeholder" id="cameraPlaceholder">
+              <div class="box-icon">📦</div>
+              <p>Place Open Shipping Box Under Bench Camera</p>
+              <button class="btn btn-primary" id="btnCapture">📸 CAPTURE & AUDIT CARTON</button>
+            </div>
+          </div>
+          <div class="stage-toolbar">
+            <button class="btn btn-secondary" id="btnSimulateFailOpen">⚡ Test Fail-Open (Rule 3)</button>
+            <button class="btn btn-secondary" id="btnSimulateAmbiguity">🟨 Test Uncertainty (Rule 4)</button>
+          </div>
+        </div>
+
+        <!-- Audit Comparison Table -->
+        <div class="audit-card">
+          <div class="card-header">
+            <h3>Manifest vs. AI Vision Audit</h3>
+            <span class="latency-badge" id="latencyBadge">Inference: -- ms</span>
+          </div>
+          <div class="audit-grid">
+            <div class="audit-column">
+              <h4>📋 Order Manifest (Expected)</h4>
+              <div class="sku-list" id="expectedSkuList"></div>
+            </div>
+            <div class="audit-column">
+              <h4>👁️ AI Vision Observed</h4>
+              <div class="sku-list" id="observedSkuList"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Panel: Evidence Trace & Operator Override -->
+      <aside class="evidence-panel">
+        <div class="panel-header">
+          <h2>Evidence Record & Trace</h2>
+        </div>
+
+        <div class="checks-card">
+          <h3>Compliance Checks</h3>
+          <div class="check-item">
+            <span>All Items Present</span>
+            <span class="check-status" id="chkPresent">--</span>
+          </div>
+          <div class="check-item">
+            <span>Quantities Correct</span>
+            <span class="check-status" id="chkQty">--</span>
+          </div>
+          <div class="check-item">
+            <span>No Extra Items</span>
+            <span class="check-status" id="chkNoExtra">--</span>
+          </div>
+        </div>
+
+        <div class="discrepancy-card">
+          <h3>Flagged Discrepancies</h3>
+          <div id="discrepancyTags" class="discrepancy-tags">
+            <span class="tag tag-none">No Discrepancies</span>
+          </div>
+        </div>
+
+        <!-- Operator Override Section (Rule Honesty) -->
+        <div class="override-card">
+          <h3>Operator Manual Override</h3>
+          <p class="override-sub">Log bench override (original AI verdict preserved in audit trail)</p>
+          <div class="override-form">
+            <select id="overrideVerdict">
+              <option value="SEAL">🟩 Force SEAL (Override)</option>
+              <option value="STOP_AND_FIX">🟥 Force STOP & FIX</option>
+            </select>
+            <textarea id="overrideReason" placeholder="Enter reason (e.g. 'Verified promo item placed manually')"></textarea>
+            <button class="btn btn-warning" id="btnSubmitOverride">📝 LOG OVERRIDE</button>
+          </div>
+          <div id="overrideStatus" class="override-log"></div>
+        </div>
+
+        <!-- Evidence JSON Exporter -->
+        <div class="json-card">
+          <div class="card-header">
+            <h3>JSON Evidence Record</h3>
+            <button class="btn-xs" id="btnCopyJson">📋 Copy</button>
+          </div>
+          <pre id="jsonViewer" class="json-viewer">Select a unit to view JSON evidence record...</pre>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

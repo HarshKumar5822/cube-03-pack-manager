@@ -6,38 +6,47 @@
 
 ---
 
-## 📁 Submission Directory Structure
+## 📁 Expected Layout
 
 ```
 submissions/harshkumar5822/
-├── README.md               ← Index & Submission Overview
+├── README.md               ← Index & Submission Overview (this file)
 ├── 01-customer-letter.md   ← Working Backwards Customer Letter
 ├── 02-prfaq.md             ← Press Release & Hard Questions FAQ
 ├── 03-one-pager.md         ← Solution Architecture, Metrics & Kill Condition
-├── CLAUDE.md               ← Engineering Rules, Architectural Constraints & Protocol
+├── CLAUDE.md               ← Durable constraints, hard rules, engineering guidelines
 ├── build-brief.md          ← Technical Brief & System Specification
 ├── build-log.md            ← Active Chronological Engineering Log
 ├── eval-report.md          ← Evaluation Methodology, Accuracy, FP/FN & Uncertainty Matrix
 ├── contract/               ← Inter-Manager JSON Evidence Schema & Interoperability Specs
+│   ├── evidence-contract.json
+│   └── README.md
 └── agent/                  ← Vision Agent Core Code, Backend API, & MERN Interface
+    ├── cli.js
+    ├── pack-agent.js
+    ├── vision-engine.js
+    ├── matcher.js
+    ├── tenancy.js
+    ├── types.js
+    └── package.json
 ```
 
 ---
 
-## 🚦 Roadmap & Implementation Status
+## 🚦 Status
 
-| Phase | Component / Deliverable | Description | Status |
-| :---: | :--- | :--- | :---: |
-| **Phase 1** | Working Backwards Documentation | `01-customer-letter.md`, `02-prfaq.md`, `03-one-pager.md` | ✅ Complete |
-| **Phase 2** | Technical Design & Constraints | `CLAUDE.md`, `build-brief.md`, `build-log.md` | 🔄 In Progress |
-| **Phase 3** | Headless AI Agent Core | Multi-modal vision batch reasoning engine + JSON Schema output | ⏳ Pending |
-| **Phase 4** | Evidence Contract & Traceability | Shared schema JSON exporter for Returns (04) & Recovery (05) | ⏳ Pending |
-| **Phase 5** | Evaluation & Uncertainty Benchmark | 50-unit held-out benchmark, FP/FN metrics, dual-labeller inter-rater reliability | ⏳ Pending |
-| **Phase 6** | MERN UI + Live Camera Stream | High-speed mobile/desktop web app, image uploads & override logging | ⏳ Pending |
+| Face | Deliverable | Status |
+| :---: | :--- | :---: |
+| **1** | Customer letter, PR/FAQ, one-pager | ☑ |
+| **2** | CLAUDE.md, build-brief.md, build-log.md | ☑ |
+| **3** | Headless agent on fixtures (`agent/`) | ☑ |
+| **4** | Eval report (`eval-report.md`) | ☑ |
+| **5** | Evidence record page & UI | 🔄 In Progress |
+| **6** | Cross-pod contract (`contract/`) | ☑ |
 
 ---
 
-## 🎯 Primary Kill Condition
+## 🎯 Kill Condition
 
 > **Kill Condition:** If zero-shot visual verification fails to achieve $\ge 85\%$ accuracy on unbagged item counts across heterogeneous SKU mixes without per-SKU training or barcodes visible, OR if single-unit batch inference latency exceeds 2.5 seconds on mobile networks, the headless agent must default to mandatory barcode scanning fallback with explicit `UNCERTAIN` audit tagging rather than issuing false `SEAL` verdicts.
 
@@ -48,3 +57,8 @@ submissions/harshkumar5822/
 - [01 - Customer Letter](01-customer-letter.md)
 - [02 - PR / FAQ](02-prfaq.md)
 - [03 - Executive One-Pager](03-one-pager.md)
+- [CLAUDE.md](CLAUDE.md)
+- [Build Brief](build-brief.md)
+- [Build Log](build-log.md)
+- [Eval Report](eval-report.md)
+- [Evidence Contract](contract/README.md)
