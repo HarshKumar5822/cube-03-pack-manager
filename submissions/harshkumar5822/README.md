@@ -11,6 +11,7 @@
 ```
 submissions/harshkumar5822/
 ├── README.md               ← Index & Submission Overview (this file)
+├── ARCHITECTURE.md         ← Technical System Architecture & Data Flow
 ├── 01-customer-letter.md   ← Working Backwards Customer Letter
 ├── 02-prfaq.md             ← Press Release & Hard Questions FAQ
 ├── 03-one-pager.md         ← Solution Architecture, Metrics & Kill Condition
@@ -28,7 +29,12 @@ submissions/harshkumar5822/
     ├── matcher.js
     ├── tenancy.js
     ├── types.js
-    └── package.json
+    ├── server.js
+    ├── package.json
+    └── ui/
+        ├── index.html
+        ├── app.css
+        └── app.js
 ```
 
 ---
@@ -41,7 +47,7 @@ submissions/harshkumar5822/
 | **2** | CLAUDE.md, build-brief.md, build-log.md | ☑ |
 | **3** | Headless agent on fixtures (`agent/`) | ☑ |
 | **4** | Eval report (`eval-report.md`) | ☑ |
-| **5** | Evidence record page & UI | 🔄 In Progress |
+| **5** | Evidence record page & UI (`agent/ui/`) | ☑ |
 | **6** | Cross-pod contract (`contract/`) | ☑ |
 
 ---
@@ -54,6 +60,7 @@ submissions/harshkumar5822/
 
 ## 🔗 Quick Links & Nav
 
+- [ARCHITECTURE.md](ARCHITECTURE.md)
 - [01 - Customer Letter](01-customer-letter.md)
 - [02 - PR / FAQ](02-prfaq.md)
 - [03 - Executive One-Pager](03-one-pager.md)
