@@ -3,14 +3,14 @@
   "name": "pack-manager",
   "builds": [
     {
-      "src": "backend/server/index.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "backend/server/index.js"
+      "dest": "api/index.js"
     }
   ]
 }
