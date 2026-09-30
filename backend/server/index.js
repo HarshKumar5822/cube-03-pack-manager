@@ -31,11 +31,15 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
 
 function start(port) {
   const cfg = getConfig();
+  const { connectMongoDB } = require('./mongo');
+  connectMongoDB().catch((err) => console.warn('[Database] Async connection warning:', err.message));
   return app.listen(port ?? cfg.port, () => {
     console.log(`\n Pack Manager (Created By Harsh Kumar)  http://localhost:${port ?? cfg.port}`);
     console.log(` AI provider   ${cfg.activeProvider ? `${cfg.activeProvider} (${cfg[cfg.activeProvider].models[0]})` : 'NOT CONFIGURED - boxes will be held as PENDING_REVIEW'}\n`);
   });
 }
+
+
 
 if (require.main === module) start();
 module.exports = { app, start };
