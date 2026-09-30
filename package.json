@@ -1,0 +1,14 @@
+{
+  "name": "pack-manager-root",
+  "private": true,
+  "description": "Convenience scripts that run the backend (which also serves the frontend).",
+  "scripts": {
+    "setup": "npm --prefix backend install",
+    "start": "npm --prefix backend start",
+    "dev": "npm --prefix backend run dev",
+    "seed": "npm --prefix backend run seed",
+    "test": "npm --prefix backend test",
+    "eval": "npm --prefix backend run eval",
+    "import:products": "npm --prefix backend run import:products --"
+  }
+}

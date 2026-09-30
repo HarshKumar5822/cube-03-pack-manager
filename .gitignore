@@ -7,3 +7,5 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep

@@ -2,181 +2,116 @@
 
 **Commerce Context stream · Round 2 · Individual Build**
 
+**Created by Harsh Kumar** ([@HarshKumar5822](https://github.com/HarshKumar5822))
+
+> 📦 **Submission Index & Deliverables:** [submissions/HarshKumar5822/](submissions/HarshKumar5822/README.md)  
+> 📐 **System Architecture:** [ARCHITECTURE.md](ARCHITECTURE.md)
+
+---
+
 > Five agents, one unit, one record that follows it.
 > A physical product arrives, gets prepped, gets shipped, comes back. At every step a person makes a fast judgment that nobody records. **You build the agent that makes one of those judgments, and leaves proof.**
 
-**New here? Read these first:**
+**Quick Links:**
 
 1. [`GITHUB-GUIDE.md`](GITHUB-GUIDE.md) explains how to fork the repository, set it up, build and push your work.
 2. [`RULES.md`](RULES.md) covers the repository and engineering rules.
 
 ---
 
-## Your problem statement: Pack Manager
+## Pack Manager Overview
 
-|                              |                                                                                                                 |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Position in the chain**    | Step 3 of 5. Outbound to buyer.                                                                                 |
-| **Customer**                 | Seller or 3PL packing outbound orders                                                                           |
-| **What gets recorded**       | Contents at seal                                                                                                |
-| **Who consumes your output** | Returns Manager (what was actually sent) and Recovery Manager (buyer disputes, empty-box and wrong-item claims) |
+An AI check that looks at an **open box** and compares it with the **order** before it is sealed.
+It answers **SEAL**, **STOP & FIX**, or **UNCERTAIN**, and lists what is present, missing, wrong, extra, or the wrong quantity, with the photo kept as evidence.
 
-A picker assembles an order and closes the box. If the wrong item or quantity goes in, the customer gets a mis-ship: a refund, a return, a replacement shipment and often the review. Nobody checks, because checking every box by hand costs more than the mis-ships do.
+### Position in the chain
+Step 3 of 5. Outbound to buyer.
+* **Customer**: Seller or 3PL packing outbound orders
+* **What gets recorded**: Contents at seal
+* **Who consumes your output**: Returns Manager (what was actually sent) and Recovery Manager (buyer disputes, empty-box and wrong-item claims)
 
-**What the agent returns, from a photograph of the open box before it is sealed:**
+---
 
-* Every item present, matched against the order lines
-* Quantities correct per line
-* Nothing extra in the box
-* A verdict: seal it, or stop and fix
+## Run it
 
-> **Know your customer's limits.** This only exists for merchant-fulfilled and 3PL orders. If a seller is fully FBA, Amazon packs the box and there is nothing to verify. That narrows your customer more than the other statements.
-
-> **Be honest about competition.** Three funded companies already sell pack verification into large distribution centers. You will not out-feature them in two weeks. Your question is whether it can work for a seller with no fixed station and no hardware budget, which is a customer they do not call on.
-
-### The chain you are part of
-
-```text
- Supplier delivery      Inbound to Amazon     Outbound to buyer     Customer return        Money back
- ┌──────────────┐      ┌──────────────┐      ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
- │ 01 Receiving │ ───▶ │ 02 Prep      │ ───▶ │ 03 Pack      │ ───▶ │ 04 Returns   │      │ 05 Recovery  │
- │ condition on │      │ compliance   │      │ contents at  │      │ condition &  │      │ reads all    │
- │ arrival      │      │ proof        │      │ seal         │      │ disposition  │      │ four → claim │
- └──────┬───────┘      └──────┬───────┘      └──────┬───────┘      └──────┬───────┘      └──────▲───────┘
-        └─────────────────────┴─────────────────────┴─────────────────────┴─────────────────────┘
+```bash
+npm run setup          # installs backend dependencies
+cp backend/.env.example backend/.env     # then add ONE key (Groq or Anthropic)
+npm run seed           # demo records + 3 sample orders (optional)
+npm start              # http://localhost:4000
 ```
 
-The first four are the same machine: a camera, a model, and a decision bound to a record. What changes is the ruleset, the buyer and the moment. The fifth has no camera. It turns the other four's records into a claim.
-
-Your output has to be usable by another pod. That's deliberate, and it's scored.
+Node 18 or newer. With no key the app still runs: every box is held as "Manual check" and **nothing is guessed**.
 
 ---
 
-## Reference data
+## How the AI is used (and kept honest)
 
-`data/` holds a **dummy** CSV for reference while you design and build. Its columns and meanings are listed in [`data/README.md`](data/README.md).
+1. **Blind perception.** One vision call per box (up to 3 photos). The model is **never shown the order**, so it cannot confirm what it was told to expect. It returns JSON: SKU, quantity, confidence, the evidence it saw, and approximate box positions.
+2. **Validation.** SKUs outside the catalogue become "unmapped" objects. A detection with no stated evidence cannot be high-confidence. An empty result raises a photo-quality flag.
+3. **Plain code decides** (`backend/server/matcher.js`). Only things actually *seen* can cause STOP & FIX. Not seeing something in a blurry, dark or partial photo gives UNCERTAIN, never a guess. Products with no description or photo cannot be verified and are reported UNCERTAIN.
+4. **Fail open.** If the AI is unreachable, the box is saved as PENDING_REVIEW with the photo. No detections are invented.
+5. **Claude co-pilot.** Ask "why this verdict?" on any record. It is grounded only in that record and **cannot change the verdict**. Without a model it falls back to a labelled rule-based explanation.
+6. **Reference photos.** With Anthropic as provider, catalogue photos are sent alongside the box photos to help separate look-alikes (blue vs red cap).
+7. **Human override** needs a reason and is kept in the audit trail next to the AI's original verdict.
 
-**The data is synthetic.** The SKUs, ASINs, FNSKUs, orders, suppliers, operators and amounts are all invented. The requirement flags and fee amounts are **not** Amazon's real rules or fees. Engineering rule 5 applies: look the authoritative rule up. The `photo_refs` paths are placeholders, and no images ship with this repo. Your fixtures and eval set are yours to capture.
-
-All five buildathon repos share the same `unit_id` values (`UNIT-0001` … `UNIT-0100`). You can follow one unit from receiving through recovery, the same way the real records will be joined. In the sample, each unit takes one route: **FBA** (prep, then Amazon ships it and charges fees) or **merchant-fulfilled / 3PL** (the seller packs it). So a unit has a Prep record or a Pack record, never both.
+Providers: Groq (default `qwen/qwen3.6-27b`, fallback `qwen/qwen3.8-27b`) or Anthropic (`claude-sonnet-5-5`, fallback `claude-haiku-4-5-20251001`). Model IDs get retired; the **System** page asks the provider which models it really serves and flags any that are gone.
 
 ---
 
-## How this works
+## Pages
 
-You have a defined problem statement and a repository to build from. Real products are built backwards from the customer and forwards through the evidence. You should understand the customer and the operational workflow before you write code, then build and measure whether the solution works.
+| Page | What it does |
+|---|---|
+| Bench | Pick an order, add photos (upload, drag, or camera), run the check, stamped verdict, boxes on the photo, co-pilot |
+| Insights | Verdict doughnut, daily line graph with cumulative seal rate, defect types, worst products, confidence histogram, channel breakdown |
+| Orders | Build orders from the catalogue |
+| Audit | Every record, filters, photos, AI details, override, CSV export |
+| Library | Product descriptions and reference photos (this is what the AI recognises) |
+| Label desk | Manual labelling of PRODUCT 01-50 (see below) |
+| Benchmark | Evaluation against 21 scenarios, plus a Logic lab to try what-if detections |
+| System | Provider, model check, how a verdict is made, workspace isolation check |
 
-Your goal is to turn the Pack Manager problem into a working, measurable agent.
+**Live vs Demo.** Charts show Live data by default. Demo data is built from the challenge's sample rows and 21 scenarios, always flagged, never mixed into Live numbers, and removable.
 
-### What you're given
+---
 
-* This problem statement
-* A domain brief covering the real economics, fee structures and what a working day in a warehouse looks like *(shared by the organisers)*
-* The engineering rules in [`RULES.md`](RULES.md)
-* Repository sample data and supporting resources
-* Any additional build resources shared by the organisers
+## The 8 challenge scenarios
 
-### What you produce
+Correct order, missing item, wrong item, extra item, wrong quantity, multiple identical products, visually similar products, and ambiguous photos are all in `backend/data/eval_set.json` and run by `npm run eval` and the Benchmark page.
 
-Build your solution in **your own GitHub fork**.
+**What the benchmark does and does not prove.** The bundled run skips the AI vision step and only tests the matching rules against author-written labels: 20 of 21 verdicts agree, 0 unsafe seals (a box that should be held but got SEAL). The 2 differences are reported, not hidden. It says **nothing** about how well a model recognises real products. For that, put photos and a `labels.csv` in `backend/fixtures/eval/` (see the README there) and run `npm run eval:vision`.
 
-Your final Round 2 submission should include:
+---
 
-* A working Pack Manager
-* An `README.md` explaining your solution, setup, assumptions and limitations
-* An `ARCHITECTURE.md`
-* An eval report/results with numbers and named failure modes
-* A demo video
-* A deployment URL, where applicable
-* Your mandatory LinkedIn post URL
+## Product photos from the Drive folder
 
-## Build and submission flow
+The app cannot fetch the Drive folder by itself. Download the folder, then:
 
-```text
-Understand
-    ↓
-Build
-    ↓
-Test
-    ↓
-Evaluate
-    ↓
-Document
-    ↓
-Demo / Deploy
-    ↓
-Submit
+```bash
+npm run import:products -- "/path/to/CUBE 2026 - RTN PRODUCT COLLECTION"
 ```
 
-Round 2 is an **individual build**.
+Photos are filed under `PRODUCT-01` to `PRODUCT-50` and appear in the Library, the order builder, the Bench, and the Label desk. Give each product a name and description in the Library so the AI can recognise it.
 
-The official build phase begins on **25 September 2026 at 9:00 AM IST**.
-
-Submissions open from **27 September 2026**.
-
-The final submission deadline is **1 October 2026 at 6:00 PM IST**.
-
-The submission form closes permanently at the deadline. **There is no resubmission.**
-
-All code commits forming your Round 2 submission must be made during the authorised build phase. Do not continue making Round 2 code changes after the build phase ends.
-
-## What we're being straight with you about
-
-* **The core assumption is untested.** Nobody knows yet whether vision models can identify products and verify box contents reliably across long-tail catalogues without per-SKU training. Finding out that it doesn't hold, and documenting that clearly, counts as a useful outcome.
-* **Nobody has spoken to a customer yet.** If you can get a real prep center or seller on a call, ask them to rank the five problems by urgency. Don't ask whether they'd buy what you're building.
-* **The background documents disagree in places.** A contradiction is a finding. Raise it as an Issue labelled `finding`.
+The **Label desk** records a person's answers (matches details? parts visible? condition? SKU/ASIN defaulting to UNKNOWN) and exports a CSV or reply text. The AI never pre-fills answers, and there is no restock/refurbish/liquidate/dispose option.
 
 ---
 
-## Evaluation
+## Tests
 
-Your Round 2 submission is evaluated out of **100 points**:
-
-| Criterion                                    |  Points |
-| -------------------------------------------- | ------: |
-| Problem Understanding & Solution Relevance   |  **15** |
-| Agent Functionality & Decision Quality       |  **25** |
-| Evaluation, Accuracy & Uncertainty Handling  |  **25** |
-| Evidence, Traceability & Engineering Quality |  **20** |
-| UX, Demo & Documentation                     |  **15** |
-| **TOTAL**                                    | **100** |
-
-For the vision-based portions of the Pack Manager, use an appropriate unseen/held-out evaluation set and report your methodology, results, false positives, false negatives, `UNCERTAIN` cases and failure modes.
-
----
-
-## Evidence and decision traceability
-
-Your Pack Manager should leave evidence behind for its decisions.
-
-At minimum, the workflow should make it possible to understand:
-
-```text
-What should be in the box?
-        ↓
-What was actually found?
-        ↓
-What checks were performed?
-        ↓
-What verdict was produced?
-        ↓
-Why?
+```bash
+npm test               # 27 tests: matcher rules and the full AI pipeline against a stub AI server
 ```
 
-Use the official evidence contract provided by the organisers as the baseline for interoperability with the other Managers.
+The pipeline tests cover the blind prompt, multi-photo requests, model fallback, fail-open, rejecting an HTML file sent as a photo, org-scoped evidence, co-pilot, and the Anthropic request shape.
 
 ---
 
-## PASS · FAIL · UNCERTAIN
+## Known limits
 
-For individual checks:
-
-* **PASS** — the evidence supports the condition.
-* **FAIL** — the evidence shows the condition is not met.
-* **UNCERTAIN** — the evidence is insufficient for a reliable judgment.
-
-`UNCERTAIN` is not simply a low-confidence PASS.
-
----
-
-*CUBE Buildathon · Commerce Context*
+- **No real sign-in.** The workspace and operator are chosen in the browser, so tenancy is demo-grade. Add authentication before using real customer data.
+- Live AI calls were not run in development (no network access to the providers). Expect to tune the prompt and confidence floor on real photos.
+- Box positions are the model's approximations.
+- Cost avoided is an estimate from an assumed cost per wrong shipment, not a measurement.
+- Never commit `backend/.env`. If an API key was ever shared or committed, rotate it.

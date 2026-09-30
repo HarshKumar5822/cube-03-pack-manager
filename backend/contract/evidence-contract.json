@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PackManagerEvidenceRecord",
+  "description": "Standard evidence record schema for Pack Manager (Step 03 of 5) shared with Returns Manager (04) and Recovery Manager (05)",
+  "type": "object",
+  "required": [
+    "record_id",
+    "unit_id",
+    "org_id",
+    "order_id",
+    "channel",
+    "captured_at",
+    "photo_refs",
+    "order_lines",
+    "observed_in_box",
+    "agent_verdict",
+    "discrepancy_types",
+    "checks",
+    "confidence_score"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^PCK-[A-Za-z0-9-]+$",
+      "description": "Unique record identifier for Pack stage (prefix PCK-)"
+    },
+    "unit_id": {
+      "type": "string",
+      "pattern": "^UNIT-[0-9]{4}$",
+      "description": "Cross-stage joined unit tracking ID"
+    },
+    "org_id": {
+      "type": "string",
+      "enum": ["org_demo_alpha", "org_demo_bravo"],
+      "description": "Tenant organization ID for RLS enforcement"
+    },
+    "order_id": {
+      "type": "string",
+      "description": "Customer purchase order identifier"
+    },
+    "channel": {
+      "type": "string",
+      "enum": ["amazon_mfn", "shopify", "walmart", "3pl_client"],
+      "description": "Fulfillment sales channel (FBA excluded)"
+    },
+    "captured_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp of camera capture"
+    },
+    "photo_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Relative/signed S3 paths of open-box photos prior to seal"
+    },
+    "order_lines": {
+      "type": "string",
+      "description": "Manifest expected items in format SKU:qty;SKU:qty"
+    },
+    "observed_in_box": {
+      "type": "string",
+      "description": "AI observed items in format SKU:qty;SKU:qty"
+    },
+    "agent_verdict": {
+      "type": "string",
+      "enum": ["SEAL", "STOP_AND_FIX", "UNCERTAIN", "PENDING_REVIEW"],
+      "description": "Primary operational verdict"
+    },
+    "discrepancy_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["MISSING_ITEM", "SHORT_QUANTITY", "WRONG_ITEM", "EXTRA_ITEM", "VISUAL_AMBIGUITY", "NETWORK_TIMEOUT"]
+      },
+      "description": "List of flagged discrepancies"
+    },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "all_items_present": { "type": "string", "enum": ["PASS", "FAIL", "UNCERTAIN"] },
+        "quantities_correct": { "type": "string", "enum": ["PASS", "FAIL", "UNCERTAIN"] },
+        "no_extra_items": { "type": "string", "enum": ["PASS", "FAIL", "UNCERTAIN"] }
+      },
+      "required": ["all_items_present", "quantities_correct", "no_extra_items"]
+    },
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Overall vision confidence index"
+    },
+    "operator_override": {
+      "type": "object",
+      "properties": {
+        "original_verdict": { "type": "string" },
+        "new_verdict": { "type": "string" },
+        "operator_id": { "type": "string" },
+        "override_reason": { "type": "string" },
+        "override_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

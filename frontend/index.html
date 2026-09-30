@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pack Manager - check the box before you seal it</title>
+  <meta name="description" content="AI check of an open box against the order: SEAL, STOP & FIX, or UNCERTAIN.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F4C20D'/%3E%3Cpath d='M6 11l10-5 10 5v10l-10 5-10-5z' fill='none' stroke='%231B2127' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M6 11l10 5 10-5M16 16v10' fill='none' stroke='%231B2127' stroke-width='2.4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail" aria-label="Main">
+      <div class="rail-brand">
+        <div class="mark" id="brand-mark"></div>
+        <div class="brand-name">PACK<br>MANAGER</div>
+      </div>
+      <nav id="nav" aria-label="Sections"></nav>
+      <div class="rail-foot">
+        <div class="author-tag"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" style="width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><span>Created By Harsh Kumar</span></div>
+        <div class="ai-dot" id="ai-dot" title="AI provider status"><i></i><span>Checking AI…</span></div>
+        <label><span class="foot-label">Workspace</span><select id="org" aria-label="Workspace"></select></label>
+        <label><span class="foot-label">Operator</span><select id="operator" aria-label="Operator"></select></label>
+      </div>
+    </aside>
+    <main class="main" id="main" tabindex="-1"><div class="skeleton" style="height:220px"></div></main>
+  </div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script src="vendor/chart.umd.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

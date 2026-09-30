@@ -1,0 +1,93 @@
+[
+  {
+    "sku": "SKU-TSHIRT-BLK",
+    "name": "Black T-Shirt",
+    "category": "apparel",
+    "appearance": "Plain crew-neck cotton t-shirt, solid black, folded flat.",
+    "distinguish_from": ["Any other coloured t-shirt"]
+  },
+  {
+    "sku": "SKU-CAP-BLU",
+    "name": "Blue Cap",
+    "category": "apparel",
+    "appearance": "Baseball-style cap, solid royal blue fabric, curved brim, adjustable strap at back.",
+    "distinguish_from": ["SKU-CAP-RED (identical shape, different colour)"]
+  },
+  {
+    "sku": "SKU-CAP-RED",
+    "name": "Red Cap",
+    "category": "apparel",
+    "appearance": "Baseball-style cap, solid red fabric, curved brim, adjustable strap at back.",
+    "distinguish_from": ["SKU-CAP-BLU (identical shape, different colour)"]
+  },
+  {
+    "sku": "SKU-CABLE-USBC",
+    "name": "USB-C Charging Cable",
+    "category": "electronics",
+    "appearance": "1m braided cable, USB-A to USB-C, coiled with a velcro tie.",
+    "distinguish_from": ["Lightning or micro-USB cables which have a different connector shape"]
+  },
+  {
+    "sku": "SKU-BOTTLE-750",
+    "name": "750ml Steel Water Bottle",
+    "category": "home",
+    "appearance": "Cylindrical brushed-steel bottle, screw cap, approx 750ml, no printed logo.",
+    "distinguish_from": ["Plastic bottles or bottles with a flip-top lid"]
+  },
+  {
+    "sku": "SKU-PUZZLE-500",
+    "name": "500-Piece Jigsaw Puzzle",
+    "category": "toys",
+    "appearance": "Flat rectangular box, roughly 27x19x5cm, puzzle image on the lid.",
+    "distinguish_from": ["Board games of similar box size"]
+  },
+  {
+    "sku": "SKU-TOWEL-BLU",
+    "name": "Blue Bath Towel",
+    "category": "home",
+    "appearance": "Folded cotton towel, solid blue, terry weave visible on edges.",
+    "distinguish_from": ["Towels of a different colour or a face-cloth (much smaller)"]
+  },
+  {
+    "sku": "SKU-SERUM-30",
+    "name": "30ml Face Serum",
+    "category": "beauty",
+    "appearance": "Small glass dropper bottle, approx 30ml, dark amber or clear glass with a pipette cap.",
+    "distinguish_from": ["Larger lotion bottles or pump bottles"]
+  },
+  {
+    "sku": "SKU-PROT-1KG",
+    "name": "1kg Protein Powder Tub",
+    "category": "grocery",
+    "appearance": "Large cylindrical plastic tub with a screw lid, approx 1kg, label wraps the tub.",
+    "distinguish_from": ["Smaller sample sachets or shaker bottles"]
+  },
+  {
+    "sku": "SKU-CANDLE-3",
+    "name": "Set of 3 Scented Candles",
+    "category": "home",
+    "appearance": "Three small glass jar candles, sold together, usually in a single tray or wrap.",
+    "distinguish_from": ["A single candle jar (wrong quantity, not wrong item)"]
+  },
+  {
+    "sku": "SKU-LAMP-LED",
+    "name": "LED Desk Lamp",
+    "category": "electronics",
+    "appearance": "Folding-arm desk lamp with a rectangular LED panel head and a weighted base.",
+    "distinguish_from": ["Bulbs sold separately or clip-on lamps"]
+  },
+  {
+    "sku": "SKU-MUG-11",
+    "name": "11oz Ceramic Mug",
+    "category": "home",
+    "appearance": "Standard ceramic coffee mug, approx 11oz, single colour glaze, C-shaped handle.",
+    "distinguish_from": ["Travel mugs with a lid, or mugs of a visibly different size"]
+  },
+  {
+    "sku": "SKU-LEASH-6FT",
+    "name": "6ft Dog Leash",
+    "category": "pet",
+    "appearance": "Nylon webbing leash approx 6ft long, clip at one end, loop handle at the other, usually coiled.",
+    "distinguish_from": ["Retractable leashes (different housing) or collars"]
+  }
+]

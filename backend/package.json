@@ -1,0 +1,25 @@
+{
+  "name": "pack-manager",
+  "version": "3.0.0",
+  "description": "AI Pack Manager - verifies outbound box contents against the order before seal",
+  "main": "server/index.js",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed": "node scripts/seed.js",
+    "import:products": "node scripts/import-products.js",
+    "eval": "node eval/run-eval.js",
+    "eval:vision": "node eval/run-eval.js --vision",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "multer": "^2.0.1",
+    "uuid": "^9.0.1"
+  }
+}

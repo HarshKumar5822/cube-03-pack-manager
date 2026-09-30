@@ -1,0 +1,3155 @@
+{
+  "records": [
+    {
+      "record_id": "PCK-0006",
+      "unit_id": "UNIT-0006",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50006",
+      "channel": "shopify",
+      "captured_at": "2026-06-22T08:10:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "SKU-CABLE-USBC:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_ben",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0008",
+      "unit_id": "UNIT-0008",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50008",
+      "channel": "shopify",
+      "captured_at": "2026-06-09T15:31:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-BOTTLE-750:1",
+      "observed_in_box": "SKU-BOTTLE-750:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_amira",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0009",
+      "unit_id": "UNIT-0009",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50009",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-06-19T23:36:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PUZZLE-500:1;SKU-BOTTLE-750:1",
+      "observed_in_box": "SKU-PUZZLE-500:1;SKU-BOTTLE-750:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_amira",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PUZZLE-500",
+            "name": "500-Piece Jigsaw Puzzle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0016",
+      "unit_id": "UNIT-0016",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50016",
+      "channel": "shopify",
+      "captured_at": "2026-06-17T07:31:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-TOWEL-BLU:2",
+      "observed_in_box": "SKU-TOWEL-BLU:2",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_dana",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-TOWEL-BLU",
+            "name": "Blue Bath Towel",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0019",
+      "unit_id": "UNIT-0019",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50019",
+      "channel": "walmart",
+      "captured_at": "2026-06-16T01:17:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-TOWEL-BLU:1",
+      "observed_in_box": "SKU-TOWEL-BLU:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_chen",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-TOWEL-BLU",
+            "name": "Blue Bath Towel",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0021",
+      "unit_id": "UNIT-0021",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50021",
+      "channel": "shopify",
+      "captured_at": "2026-07-01T01:24:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PUZZLE-500:1",
+      "observed_in_box": "SKU-PUZZLE-500:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_fatima",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PUZZLE-500",
+            "name": "500-Piece Jigsaw Puzzle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0022",
+      "unit_id": "UNIT-0022",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50022",
+      "channel": "walmart",
+      "captured_at": "2026-06-10T07:34:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-SERUM-30:1",
+      "observed_in_box": "SKU-SERUM-30:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_chen",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-SERUM-30",
+            "name": "30ml Face Serum",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0023",
+      "unit_id": "UNIT-0023",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50023",
+      "channel": "shopify",
+      "captured_at": "2026-06-12T11:55:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PUZZLE-500:1;SKU-TOWEL-BLU:1",
+      "observed_in_box": "SKU-PUZZLE-500:1;SKU-TOWEL-BLU:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_amira",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PUZZLE-500",
+            "name": "500-Piece Jigsaw Puzzle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-TOWEL-BLU",
+            "name": "Blue Bath Towel",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0027",
+      "unit_id": "UNIT-0027",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50027",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-06-15T21:17:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PUZZLE-500:1",
+      "observed_in_box": "SKU-PUZZLE-500:1;SKU-CABLE-USBC:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "EXTRA_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "FAIL"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_amira",
+        "issues": [
+          "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+        ],
+        "findings": [
+          {
+            "type": "EXTRA",
+            "confirmed": true,
+            "foundSku": "SKU-CABLE-USBC",
+            "expected": 0,
+            "found": 1,
+            "text": "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-PUZZLE-500",
+            "name": "500-Piece Jigsaw Puzzle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0028",
+      "unit_id": "UNIT-0028",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50028",
+      "channel": "walmart",
+      "captured_at": "2026-06-28T13:32:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PROT-1KG:1",
+      "observed_in_box": "SKU-PROT-1KG:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_ben",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PROT-1KG",
+            "name": "1kg Protein Powder Tub",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0032",
+      "unit_id": "UNIT-0032",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50032",
+      "channel": "shopify",
+      "captured_at": "2026-06-13T07:55:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "SKU-CABLE-USBC:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_dana",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0033",
+      "unit_id": "UNIT-0033",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50033",
+      "channel": "walmart",
+      "captured_at": "2026-06-11T12:03:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PROT-1KG:2",
+      "observed_in_box": "SKU-PROT-1KG:2",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_ben",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PROT-1KG",
+            "name": "1kg Protein Powder Tub",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0034",
+      "unit_id": "UNIT-0034",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50034",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-06-15T22:47:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CANDLE-3:2;SKU-BOTTLE-750:1",
+      "observed_in_box": "SKU-CANDLE-3:2;SKU-BOTTLE-750:1;SKU-CABLE-USBC:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "EXTRA_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "FAIL"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_chen",
+        "issues": [
+          "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+        ],
+        "findings": [
+          {
+            "type": "EXTRA",
+            "confirmed": true,
+            "foundSku": "SKU-CABLE-USBC",
+            "expected": 0,
+            "found": 1,
+            "text": "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CANDLE-3",
+            "name": "Set of 3 Scented Candles",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0043",
+      "unit_id": "UNIT-0043",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50043",
+      "channel": "walmart",
+      "captured_at": "2026-06-15T08:31:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-LAMP-LED:2",
+      "observed_in_box": "SKU-LAMP-LED:2",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_amira",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-LAMP-LED",
+            "name": "LED Desk Lamp",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0044",
+      "unit_id": "UNIT-0044",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50044",
+      "channel": "shopify",
+      "captured_at": "2026-06-23T13:25:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CANDLE-3:1",
+      "observed_in_box": "SKU-BOTTLE-750:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "WRONG_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "FAIL",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_fatima",
+        "issues": [
+          "Wrong item: expected Set of 3 Scented Candles (SKU-CANDLE-3) but saw 750ml Steel Water Bottle (SKU-BOTTLE-750) instead."
+        ],
+        "findings": [
+          {
+            "type": "WRONG_ITEM",
+            "confirmed": true,
+            "expectedSku": "SKU-CANDLE-3",
+            "foundSku": "SKU-BOTTLE-750",
+            "expected": 1,
+            "found": 1,
+            "text": "Wrong item: expected Set of 3 Scented Candles (SKU-CANDLE-3) but saw 750ml Steel Water Bottle (SKU-BOTTLE-750) instead."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CANDLE-3",
+            "name": "Set of 3 Scented Candles",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          },
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0047",
+      "unit_id": "UNIT-0047",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50047",
+      "channel": "3pl_client",
+      "captured_at": "2026-06-06T17:25:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-MUG-11:1",
+      "observed_in_box": "SKU-MUG-11:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_ben",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-MUG-11",
+            "name": "11oz Ceramic Mug",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0054",
+      "unit_id": "UNIT-0054",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50054",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-06-28T21:45:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-MUG-11:2",
+      "observed_in_box": "SKU-MUG-11:2",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_chen",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-MUG-11",
+            "name": "11oz Ceramic Mug",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0056",
+      "unit_id": "UNIT-0056",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50056",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-06-21T12:07:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-SERUM-30:1;SKU-PROT-1KG:1",
+      "observed_in_box": "SKU-SERUM-30:1;SKU-PROT-1KG:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_fatima",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-SERUM-30",
+            "name": "30ml Face Serum",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-PROT-1KG",
+            "name": "1kg Protein Powder Tub",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0057",
+      "unit_id": "UNIT-0057",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50057",
+      "channel": "3pl_client",
+      "captured_at": "2026-06-16T20:16:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PROT-1KG:2;SKU-LEASH-6FT:1",
+      "observed_in_box": "SKU-PROT-1KG:2;SKU-LEASH-6FT:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_fatima",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PROT-1KG",
+            "name": "1kg Protein Powder Tub",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-LEASH-6FT",
+            "name": "6ft Dog Leash",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0059",
+      "unit_id": "UNIT-0059",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50059",
+      "channel": "3pl_client",
+      "captured_at": "2026-06-07T18:26:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CANDLE-3:1;SKU-LAMP-LED:1",
+      "observed_in_box": "SKU-CANDLE-3:1;SKU-LAMP-LED:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_dana",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-CANDLE-3",
+            "name": "Set of 3 Scented Candles",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-LAMP-LED",
+            "name": "LED Desk Lamp",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0062",
+      "unit_id": "UNIT-0062",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50062",
+      "channel": "3pl_client",
+      "captured_at": "2026-06-16T23:27:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-SERUM-30:1",
+      "observed_in_box": "SKU-SERUM-30:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_chen",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-SERUM-30",
+            "name": "30ml Face Serum",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0067",
+      "unit_id": "UNIT-0067",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50067",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-06-20T00:33:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "SKU-CABLE-USBC:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_dana",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0070",
+      "unit_id": "UNIT-0070",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50070",
+      "channel": "shopify",
+      "captured_at": "2026-06-23T10:23:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-SERUM-30:1",
+      "observed_in_box": "SKU-SERUM-30:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_fatima",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-SERUM-30",
+            "name": "30ml Face Serum",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0072",
+      "unit_id": "UNIT-0072",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50072",
+      "channel": "shopify",
+      "captured_at": "2026-06-12T20:32:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PROT-1KG:1;SKU-TOWEL-BLU:1",
+      "observed_in_box": "SKU-PROT-1KG:1;SKU-TOWEL-BLU:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_dana",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PROT-1KG",
+            "name": "1kg Protein Powder Tub",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-TOWEL-BLU",
+            "name": "Blue Bath Towel",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0078",
+      "unit_id": "UNIT-0078",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DUMMY-50078",
+      "channel": "3pl_client",
+      "captured_at": "2026-06-11T20:38:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CANDLE-3:2",
+      "observed_in_box": "SKU-CANDLE-3:2;SKU-CABLE-USBC:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "EXTRA_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "FAIL"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_chen",
+        "issues": [
+          "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+        ],
+        "findings": [
+          {
+            "type": "EXTRA",
+            "confirmed": true,
+            "foundSku": "SKU-CABLE-USBC",
+            "expected": 0,
+            "found": 1,
+            "text": "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CANDLE-3",
+            "name": "Set of 3 Scented Candles",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0079",
+      "unit_id": "UNIT-0079",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50079",
+      "channel": "shopify",
+      "captured_at": "2026-06-20T12:20:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "SKU-CABLE-USBC:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_dana",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0083",
+      "unit_id": "UNIT-0083",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50083",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-06-25T05:30:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-BOTTLE-750:1",
+      "observed_in_box": "SKU-BOTTLE-750:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_fatima",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0097",
+      "unit_id": "UNIT-0097",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50097",
+      "channel": "walmart",
+      "captured_at": "2026-06-21T22:04:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PROT-1KG:1",
+      "observed_in_box": "SKU-PROT-1KG:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_ben",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PROT-1KG",
+            "name": "1kg Protein Powder Tub",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-0100",
+      "unit_id": "UNIT-0100",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DUMMY-50100",
+      "channel": "3pl_client",
+      "captured_at": "2026-06-20T23:11:00Z",
+      "photo_refs": [],
+      "order_lines": "SKU-TOWEL-BLU:1",
+      "observed_in_box": "SKU-TOWEL-BLU:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "sample_csv",
+        "operator_id": "op_chen",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-TOWEL-BLU",
+            "name": "Blue Bath Towel",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0001",
+      "unit_id": "UNIT-9001",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60000",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-30T15:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-TSHIRT-BLK:2;SKU-CAP-BLU:1",
+      "observed_in_box": "SKU-TSHIRT-BLK:2;SKU-CAP-BLU:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.96,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_amira",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-TSHIRT-BLK",
+            "name": "Black T-Shirt",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.97
+          },
+          {
+            "sku": "SKU-CAP-BLU",
+            "name": "Blue Cap",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.95
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "correct_order",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0002",
+      "unit_id": "UNIT-9002",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60001",
+      "channel": "shopify",
+      "captured_at": "2026-09-25T14:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "SKU-CABLE-USBC:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.93,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_ben",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.93
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "correct_order",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0003",
+      "unit_id": "UNIT-9003",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DEMO-60002",
+      "channel": "walmart",
+      "captured_at": "2026-09-20T13:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PUZZLE-500:1;SKU-BOTTLE-750:1",
+      "observed_in_box": "SKU-PUZZLE-500:1;SKU-BOTTLE-750:1",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.91,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_dana",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-PUZZLE-500",
+            "name": "500-Piece Jigsaw Puzzle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.91
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "correct_order",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0004",
+      "unit_id": "UNIT-9010",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60003",
+      "channel": "3pl_client",
+      "captured_at": "2026-09-29T12:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-TSHIRT-BLK:2;SKU-CAP-BLU:1",
+      "observed_in_box": "SKU-TSHIRT-BLK:2",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "MISSING_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "FAIL",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.96,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_amira",
+        "issues": [
+          "Missing: Blue Cap (SKU-CAP-BLU) - expected 1, saw none."
+        ],
+        "findings": [
+          {
+            "type": "MISSING",
+            "confirmed": true,
+            "expectedSku": "SKU-CAP-BLU",
+            "expected": 1,
+            "found": 0,
+            "text": "Missing: Blue Cap (SKU-CAP-BLU) - expected 1, saw none."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-TSHIRT-BLK",
+            "name": "Black T-Shirt",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.96
+          },
+          {
+            "sku": "SKU-CAP-BLU",
+            "name": "Blue Cap",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "missing_item",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0005",
+      "unit_id": "UNIT-9011",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60004",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-24T11:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PROT-1KG:1;SKU-LEASH-6FT:1",
+      "observed_in_box": "SKU-LEASH-6FT:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "MISSING_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "FAIL",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_ben",
+        "issues": [
+          "Missing: 1kg Protein Powder Tub (SKU-PROT-1KG) - expected 1, saw none."
+        ],
+        "findings": [
+          {
+            "type": "MISSING",
+            "confirmed": true,
+            "expectedSku": "SKU-PROT-1KG",
+            "expected": 1,
+            "found": 0,
+            "text": "Missing: 1kg Protein Powder Tub (SKU-PROT-1KG) - expected 1, saw none."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-PROT-1KG",
+            "name": "1kg Protein Powder Tub",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          },
+          {
+            "sku": "SKU-LEASH-6FT",
+            "name": "6ft Dog Leash",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "missing_item",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0006",
+      "unit_id": "UNIT-9012",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DEMO-60005",
+      "channel": "shopify",
+      "captured_at": "2026-09-19T10:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CANDLE-3:2;SKU-BOTTLE-750:1",
+      "observed_in_box": "SKU-CANDLE-3:2",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "MISSING_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "FAIL",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.88,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_dana",
+        "issues": [
+          "Missing: 750ml Steel Water Bottle (SKU-BOTTLE-750) - expected 1, saw none."
+        ],
+        "findings": [
+          {
+            "type": "MISSING",
+            "confirmed": true,
+            "expectedSku": "SKU-BOTTLE-750",
+            "expected": 1,
+            "found": 0,
+            "text": "Missing: 750ml Steel Water Bottle (SKU-BOTTLE-750) - expected 1, saw none."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CANDLE-3",
+            "name": "Set of 3 Scented Candles",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.88
+          },
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "missing_item",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0007",
+      "unit_id": "UNIT-9020",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60006",
+      "channel": "walmart",
+      "captured_at": "2026-09-28T09:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CAP-BLU:1",
+      "observed_in_box": "SKU-CAP-RED:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "WRONG_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "FAIL",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.94,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_amira",
+        "issues": [
+          "Wrong item: expected Blue Cap (SKU-CAP-BLU) but saw Red Cap (SKU-CAP-RED) instead."
+        ],
+        "findings": [
+          {
+            "type": "WRONG_ITEM",
+            "confirmed": true,
+            "expectedSku": "SKU-CAP-BLU",
+            "foundSku": "SKU-CAP-RED",
+            "expected": 1,
+            "found": 1,
+            "text": "Wrong item: expected Blue Cap (SKU-CAP-BLU) but saw Red Cap (SKU-CAP-RED) instead."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CAP-BLU",
+            "name": "Blue Cap",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          },
+          {
+            "sku": "SKU-CAP-RED",
+            "name": "Red Cap",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.94
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "wrong_item",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0008",
+      "unit_id": "UNIT-9021",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60007",
+      "channel": "3pl_client",
+      "captured_at": "2026-09-23T08:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-MUG-11:1",
+      "observed_in_box": "SKU-BOTTLE-750:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "WRONG_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "FAIL",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_ben",
+        "issues": [
+          "Wrong item: expected 11oz Ceramic Mug (SKU-MUG-11) but saw 750ml Steel Water Bottle (SKU-BOTTLE-750) instead."
+        ],
+        "findings": [
+          {
+            "type": "WRONG_ITEM",
+            "confirmed": true,
+            "expectedSku": "SKU-MUG-11",
+            "foundSku": "SKU-BOTTLE-750",
+            "expected": 1,
+            "found": 1,
+            "text": "Wrong item: expected 11oz Ceramic Mug (SKU-MUG-11) but saw 750ml Steel Water Bottle (SKU-BOTTLE-750) instead."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-MUG-11",
+            "name": "11oz Ceramic Mug",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          },
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "wrong_item",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0009",
+      "unit_id": "UNIT-9022",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DEMO-60008",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-18T07:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CANDLE-3:1",
+      "observed_in_box": "SKU-BOTTLE-750:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "WRONG_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "FAIL",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.89,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_dana",
+        "issues": [
+          "Wrong item: expected Set of 3 Scented Candles (SKU-CANDLE-3) but saw 750ml Steel Water Bottle (SKU-BOTTLE-750) instead."
+        ],
+        "findings": [
+          {
+            "type": "WRONG_ITEM",
+            "confirmed": true,
+            "expectedSku": "SKU-CANDLE-3",
+            "foundSku": "SKU-BOTTLE-750",
+            "expected": 1,
+            "found": 1,
+            "text": "Wrong item: expected Set of 3 Scented Candles (SKU-CANDLE-3) but saw 750ml Steel Water Bottle (SKU-BOTTLE-750) instead."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CANDLE-3",
+            "name": "Set of 3 Scented Candles",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          },
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.89
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "wrong_item",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0010",
+      "unit_id": "UNIT-9030",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60009",
+      "channel": "shopify",
+      "captured_at": "2026-09-27T15:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PUZZLE-500:1",
+      "observed_in_box": "SKU-PUZZLE-500:1;SKU-CABLE-USBC:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "EXTRA_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "FAIL"
+      },
+      "confidence_score": 0.89,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_amira",
+        "issues": [
+          "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+        ],
+        "findings": [
+          {
+            "type": "EXTRA",
+            "confirmed": true,
+            "foundSku": "SKU-CABLE-USBC",
+            "expected": 0,
+            "found": 1,
+            "text": "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-PUZZLE-500",
+            "name": "500-Piece Jigsaw Puzzle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.93
+          },
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.85
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "extra_item",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0011",
+      "unit_id": "UNIT-9031",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60010",
+      "channel": "walmart",
+      "captured_at": "2026-09-22T14:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CANDLE-3:2;SKU-BOTTLE-750:1",
+      "observed_in_box": "SKU-CANDLE-3:2;SKU-BOTTLE-750:1;SKU-CABLE-USBC:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "EXTRA_ITEM"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "FAIL"
+      },
+      "confidence_score": 0.87,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_ben",
+        "issues": [
+          "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+        ],
+        "findings": [
+          {
+            "type": "EXTRA",
+            "confirmed": true,
+            "foundSku": "SKU-CABLE-USBC",
+            "expected": 0,
+            "found": 1,
+            "text": "Unexpected extra item: USB-C Charging Cable (SKU-CABLE-USBC) x1."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CANDLE-3",
+            "name": "Set of 3 Scented Candles",
+            "expectedQty": 2,
+            "detectedQty": 2,
+            "status": "MATCH",
+            "confidence": 0.9
+          },
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.92
+          },
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.8
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "extra_item",
+        "latency_ms": null
+      },
+      "operator_override": {
+        "original_verdict": "STOP_AND_FIX",
+        "new_verdict": "SEAL",
+        "operator_id": "op_ben",
+        "override_reason": "Demo: supervisor confirmed the missing item was a free gift.",
+        "override_at": "2026-09-22T14:48:20.991Z"
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0012",
+      "unit_id": "UNIT-9040",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DEMO-60011",
+      "channel": "3pl_client",
+      "captured_at": "2026-09-17T13:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-TOWEL-BLU:2",
+      "observed_in_box": "SKU-TOWEL-BLU:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "SHORT_QUANTITY"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "FAIL",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.94,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_dana",
+        "issues": [
+          "Short quantity: Blue Bath Towel (SKU-TOWEL-BLU) - expected 2, counted 1."
+        ],
+        "findings": [
+          {
+            "type": "SHORT",
+            "confirmed": true,
+            "expectedSku": "SKU-TOWEL-BLU",
+            "expected": 2,
+            "found": 1,
+            "text": "Short quantity: Blue Bath Towel (SKU-TOWEL-BLU) - expected 2, counted 1."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-TOWEL-BLU",
+            "name": "Blue Bath Towel",
+            "expectedQty": 2,
+            "detectedQty": 1,
+            "status": "SHORT",
+            "confidence": 0.94
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "wrong_quantity",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0013",
+      "unit_id": "UNIT-9041",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60012",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-26T12:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-PROT-1KG:2",
+      "observed_in_box": "SKU-PROT-1KG:3",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "SHORT_QUANTITY"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "FAIL",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.9,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_amira",
+        "issues": [
+          "Excess quantity: 1kg Protein Powder Tub (SKU-PROT-1KG) - expected 2, counted 3."
+        ],
+        "findings": [
+          {
+            "type": "EXCESS",
+            "confirmed": true,
+            "expectedSku": "SKU-PROT-1KG",
+            "expected": 2,
+            "found": 3,
+            "text": "Excess quantity: 1kg Protein Powder Tub (SKU-PROT-1KG) - expected 2, counted 3."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-PROT-1KG",
+            "name": "1kg Protein Powder Tub",
+            "expectedQty": 2,
+            "detectedQty": 3,
+            "status": "EXCESS",
+            "confidence": 0.9
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "wrong_quantity",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0014",
+      "unit_id": "UNIT-9042",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60013",
+      "channel": "shopify",
+      "captured_at": "2026-09-21T11:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-LAMP-LED:2",
+      "observed_in_box": "SKU-LAMP-LED:1",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "SHORT_QUANTITY"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "FAIL",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.91,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_ben",
+        "issues": [
+          "Short quantity: LED Desk Lamp (SKU-LAMP-LED) - expected 2, counted 1."
+        ],
+        "findings": [
+          {
+            "type": "SHORT",
+            "confirmed": true,
+            "expectedSku": "SKU-LAMP-LED",
+            "expected": 2,
+            "found": 1,
+            "text": "Short quantity: LED Desk Lamp (SKU-LAMP-LED) - expected 2, counted 1."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-LAMP-LED",
+            "name": "LED Desk Lamp",
+            "expectedQty": 2,
+            "detectedQty": 1,
+            "status": "SHORT",
+            "confidence": 0.91
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "wrong_quantity",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0015",
+      "unit_id": "UNIT-9050",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DEMO-60014",
+      "channel": "walmart",
+      "captured_at": "2026-09-30T10:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-MUG-11:4",
+      "observed_in_box": "SKU-MUG-11:4",
+      "agent_verdict": "SEAL",
+      "discrepancy_types": [],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.86,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_dana",
+        "issues": [
+          "Every expected line item was seen at the correct quantity, with nothing extra."
+        ],
+        "findings": [],
+        "line_items": [
+          {
+            "sku": "SKU-MUG-11",
+            "name": "11oz Ceramic Mug",
+            "expectedQty": 4,
+            "detectedQty": 4,
+            "status": "MATCH",
+            "confidence": 0.86
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "multiple_identical",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0016",
+      "unit_id": "UNIT-9051",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60015",
+      "channel": "3pl_client",
+      "captured_at": "2026-09-25T09:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-TSHIRT-BLK:5",
+      "observed_in_box": "SKU-TSHIRT-BLK:4",
+      "agent_verdict": "STOP_AND_FIX",
+      "discrepancy_types": [
+        "SHORT_QUANTITY"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "FAIL",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.82,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_amira",
+        "issues": [
+          "Short quantity: Black T-Shirt (SKU-TSHIRT-BLK) - expected 5, counted 4."
+        ],
+        "findings": [
+          {
+            "type": "SHORT",
+            "confirmed": true,
+            "expectedSku": "SKU-TSHIRT-BLK",
+            "expected": 5,
+            "found": 4,
+            "text": "Short quantity: Black T-Shirt (SKU-TSHIRT-BLK) - expected 5, counted 4."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-TSHIRT-BLK",
+            "name": "Black T-Shirt",
+            "expectedQty": 5,
+            "detectedQty": 4,
+            "status": "SHORT",
+            "confidence": 0.82
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "multiple_identical",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0017",
+      "unit_id": "UNIT-9060",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60016",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-20T08:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CAP-BLU:2",
+      "observed_in_box": "SKU-CAP-BLU:1;SKU-CAP-RED:1",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0.57,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_ben",
+        "issues": [
+          "Possible extra item: Red Cap (SKU-CAP-RED) seen with low confidence.",
+          "Count unconfirmed: Blue Cap (SKU-CAP-BLU) - expected 2, counted 1, but the count is not reliable enough to call it short."
+        ],
+        "findings": [
+          {
+            "type": "EXTRA",
+            "confirmed": false,
+            "foundSku": "SKU-CAP-RED",
+            "expected": 0,
+            "found": 1,
+            "text": "Possible extra item: Red Cap (SKU-CAP-RED) seen with low confidence."
+          },
+          {
+            "type": "SHORT",
+            "confirmed": false,
+            "expectedSku": "SKU-CAP-BLU",
+            "expected": 2,
+            "found": 1,
+            "text": "Count unconfirmed: Blue Cap (SKU-CAP-BLU) - expected 2, counted 1, but the count is not reliable enough to call it short."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CAP-BLU",
+            "name": "Blue Cap",
+            "expectedQty": 2,
+            "detectedQty": 1,
+            "status": "SHORT",
+            "confidence": 0.6
+          },
+          {
+            "sku": "SKU-CAP-RED",
+            "name": "Red Cap",
+            "expectedQty": 0,
+            "detectedQty": 1,
+            "status": "EXTRA",
+            "confidence": 0.55
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "visually_similar",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0018",
+      "unit_id": "UNIT-9061",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DEMO-60017",
+      "channel": "shopify",
+      "captured_at": "2026-09-29T07:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-BOTTLE-750:1",
+      "observed_in_box": "SKU-BOTTLE-750:1",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.58,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_dana",
+        "issues": [
+          "Low confidence on 750ml Steel Water Bottle (SKU-BOTTLE-750): 58%."
+        ],
+        "findings": [
+          {
+            "type": "LOW_CONFIDENCE",
+            "confirmed": false,
+            "expectedSku": "SKU-BOTTLE-750",
+            "text": "Low confidence on 750ml Steel Water Bottle (SKU-BOTTLE-750): 58%."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-BOTTLE-750",
+            "name": "750ml Steel Water Bottle",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.58
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [],
+        "model_used": null,
+        "provider": null,
+        "scenario": "visually_similar",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0019",
+      "unit_id": "UNIT-9070",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60018",
+      "channel": "walmart",
+      "captured_at": "2026-09-24T15:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-SERUM-30:1",
+      "observed_in_box": "",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0.2,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_amira",
+        "issues": [
+          "No products could be identified in the photo(s). Nothing can be confirmed either way - retake the photo.",
+          "Photo quality issue: blurry, poor_lighting."
+        ],
+        "findings": [
+          {
+            "type": "NOTHING_SEEN",
+            "confirmed": false,
+            "text": "No products could be identified in the photo(s). Nothing can be confirmed either way - retake the photo."
+          },
+          {
+            "type": "IMAGE_QUALITY",
+            "confirmed": false,
+            "text": "Photo quality issue: blurry, poor_lighting."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-SERUM-30",
+            "name": "30ml Face Serum",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [
+          "blurry",
+          "poor_lighting"
+        ],
+        "model_used": null,
+        "provider": null,
+        "scenario": "ambiguous_photo",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0020",
+      "unit_id": "UNIT-9071",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-60019",
+      "channel": "3pl_client",
+      "captured_at": "2026-09-19T14:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-LEASH-6FT:1",
+      "observed_in_box": "SKU-LEASH-6FT:1",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "PASS"
+      },
+      "confidence_score": 0.4,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_ben",
+        "issues": [
+          "Low confidence on 6ft Dog Leash (SKU-LEASH-6FT): 40%.",
+          "Photo quality issue: partial_occlusion."
+        ],
+        "findings": [
+          {
+            "type": "LOW_CONFIDENCE",
+            "confirmed": false,
+            "expectedSku": "SKU-LEASH-6FT",
+            "text": "Low confidence on 6ft Dog Leash (SKU-LEASH-6FT): 40%."
+          },
+          {
+            "type": "IMAGE_QUALITY",
+            "confirmed": false,
+            "text": "Photo quality issue: partial_occlusion."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-LEASH-6FT",
+            "name": "6ft Dog Leash",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.4
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [
+          "partial_occlusion"
+        ],
+        "model_used": null,
+        "provider": null,
+        "scenario": "ambiguous_photo",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-0021",
+      "unit_id": "UNIT-9072",
+      "org_id": "org_demo_bravo",
+      "order_id": "ORD-DEMO-60020",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-28T13:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-CANDLE-3:1",
+      "observed_in_box": "SKU-CANDLE-3:1",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "PASS",
+        "quantities_correct": "PASS",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0.55,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "benchmark_scenario",
+        "operator_id": "op_dana",
+        "issues": [
+          "Photo quality issue: box_partially_out_of_frame."
+        ],
+        "findings": [
+          {
+            "type": "IMAGE_QUALITY",
+            "confirmed": false,
+            "text": "Photo quality issue: box_partially_out_of_frame."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CANDLE-3",
+            "name": "Set of 3 Scented Candles",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.97
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "Demo record - no photo and no AI call.",
+        "image_quality_flags": [
+          "box_partially_out_of_frame"
+        ],
+        "model_used": null,
+        "provider": null,
+        "scenario": "ambiguous_photo",
+        "latency_ms": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-P1",
+      "unit_id": "UNIT-7010",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-70",
+      "channel": "shopify",
+      "captured_at": "2026-09-29T15:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-MUG-11:1",
+      "observed_in_box": "",
+      "agent_verdict": "PENDING_REVIEW",
+      "discrepancy_types": [
+        "NETWORK_TIMEOUT"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "pending",
+        "issues": [
+          "AI unavailable: demo of fail-open. Box held for manual review."
+        ],
+        "findings": [],
+        "line_items": [],
+        "unmapped_detections": [],
+        "image_quality_flags": [],
+        "model_used": null
+      }
+    },
+    {
+      "record_id": "PCK-DEMO-P2",
+      "unit_id": "UNIT-7020",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-DEMO-71",
+      "channel": "shopify",
+      "captured_at": "2026-09-28T15:48:20.991Z",
+      "photo_refs": [],
+      "order_lines": "SKU-MUG-11:1",
+      "observed_in_box": "",
+      "agent_verdict": "PENDING_REVIEW",
+      "discrepancy_types": [
+        "NETWORK_TIMEOUT"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0,
+      "_meta": {
+        "synthetic": true,
+        "demo_source": "pending",
+        "issues": [
+          "AI unavailable: demo of fail-open. Box held for manual review."
+        ],
+        "findings": [],
+        "line_items": [],
+        "unmapped_detections": [],
+        "image_quality_flags": [],
+        "model_used": null
+      }
+    },
+    {
+      "record_id": "PCK-20260930-4062cdad",
+      "unit_id": "UNIT-1002",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-260930-002",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-30T16:08:50.359Z",
+      "photo_refs": [
+        "evidence/PCK-20260930-4062cdad_1.jpg"
+      ],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0.2,
+      "_meta": {
+        "operator_id": "op_amira",
+        "issues": [
+          "Not seen: USB-C Charging Cable (SKU-CABLE-USBC) - expected 1. The photo (other) cannot prove it is absent.",
+          "Unidentified item in box: \"Black USB-C to USB-C charging cable\". It is not in the catalogue, so the box cannot be confirmed free of extras.",
+          "Photo quality issue: other."
+        ],
+        "findings": [
+          {
+            "type": "MISSING",
+            "confirmed": false,
+            "expectedSku": "SKU-CABLE-USBC",
+            "expected": 1,
+            "found": 0,
+            "text": "Not seen: USB-C Charging Cable (SKU-CABLE-USBC) - expected 1. The photo (other) cannot prove it is absent."
+          },
+          {
+            "type": "UNIDENTIFIED",
+            "confirmed": false,
+            "found": 1,
+            "text": "Unidentified item in box: \"Black USB-C to USB-C charging cable\". It is not in the catalogue, so the box cannot be confirmed free of extras."
+          },
+          {
+            "type": "IMAGE_QUALITY",
+            "confirmed": false,
+            "text": "Photo quality issue: other."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          }
+        ],
+        "detections": [],
+        "unmapped_detections": [
+          {
+            "name_guess": "Black USB-C to USB-C charging cable",
+            "quantity": 1,
+            "confidence": 0.9,
+            "evidence": "Coiled black cable with USB-C connectors visible on both ends",
+            "box": null,
+            "photo": 1,
+            "sku": null
+          }
+        ],
+        "vision_notes": "No open shipping box is visible in the photo; only a cable on a white background is shown.",
+        "image_quality_flags": [
+          "other"
+        ],
+        "provider": "groq",
+        "model_used": "qwen/qwen3.8-27b",
+        "reference_images": 0,
+        "usage": {
+          "queue_time": 0.159230314,
+          "prompt_tokens": 3109,
+          "prompt_time": 0.253419446,
+          "completion_tokens": 151,
+          "completion_time": 0.295974951,
+          "total_tokens": 3260,
+          "total_time": 0.549394397
+        },
+        "photo_count": 1,
+        "ai_latency_ms": 1157,
+        "latency_ms": 1171
+      }
+    },
+    {
+      "record_id": "PCK-20260930-221d776e",
+      "unit_id": "UNIT-1002",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-260930-002",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-30T16:09:25.382Z",
+      "photo_refs": [
+        "evidence/PCK-20260930-221d776e_1.jpg"
+      ],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0.2,
+      "_meta": {
+        "operator_id": "op_amira",
+        "issues": [
+          "Not seen: USB-C Charging Cable (SKU-CABLE-USBC) - expected 1. The photo (other) cannot prove it is absent.",
+          "Unidentified item in box: \"USB-C to USB-C charging cable\". It is not in the catalogue, so the box cannot be confirmed free of extras.",
+          "Photo quality issue: other."
+        ],
+        "findings": [
+          {
+            "type": "MISSING",
+            "confirmed": false,
+            "expectedSku": "SKU-CABLE-USBC",
+            "expected": 1,
+            "found": 0,
+            "text": "Not seen: USB-C Charging Cable (SKU-CABLE-USBC) - expected 1. The photo (other) cannot prove it is absent."
+          },
+          {
+            "type": "UNIDENTIFIED",
+            "confirmed": false,
+            "found": 1,
+            "text": "Unidentified item in box: \"USB-C to USB-C charging cable\". It is not in the catalogue, so the box cannot be confirmed free of extras."
+          },
+          {
+            "type": "IMAGE_QUALITY",
+            "confirmed": false,
+            "text": "Photo quality issue: other."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          }
+        ],
+        "detections": [],
+        "unmapped_detections": [
+          {
+            "name_guess": "USB-C to USB-C charging cable",
+            "quantity": 1,
+            "confidence": 0.9,
+            "evidence": "Black braided cable with two identical USB-C connectors visible at both ends",
+            "box": null,
+            "photo": 1,
+            "sku": null
+          }
+        ],
+        "vision_notes": "No shipping box is visible in the photo; the image shows a product shot of a cable on a white background.",
+        "image_quality_flags": [
+          "other"
+        ],
+        "provider": "groq",
+        "model_used": "qwen/qwen3.8-27b",
+        "reference_images": 0,
+        "usage": {
+          "queue_time": 0.15943894,
+          "prompt_tokens": 3109,
+          "prompt_time": 0.250432422,
+          "completion_tokens": 155,
+          "completion_time": 0.321703724,
+          "total_tokens": 3264,
+          "total_time": 0.572136146
+        },
+        "photo_count": 1,
+        "ai_latency_ms": 993,
+        "latency_ms": 1001
+      }
+    },
+    {
+      "record_id": "PCK-20260930-63988466",
+      "unit_id": "UNIT-1002",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-260930-002",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-30T16:09:38.464Z",
+      "photo_refs": [
+        "evidence/PCK-20260930-63988466_1.jpg",
+        "evidence/PCK-20260930-63988466_2.jpg"
+      ],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "",
+      "agent_verdict": "PENDING_REVIEW",
+      "discrepancy_types": [
+        "NETWORK_TIMEOUT"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0,
+      "_meta": {
+        "operator_id": "op_amira",
+        "findings": [],
+        "line_items": [],
+        "detections": [],
+        "unmapped_detections": [],
+        "image_quality_flags": [],
+        "issues": [
+          "AI check did not run: All model attempts failed. qwen/qwen3.6-27b: HTTP 404: {\"error\":{\"message\":\"The model `qwen/qwen3.6-27b` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n | qwen/qwen3.8-27b: HTTP 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01kwnq7hbqezw8mk9h23rwr2ca` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 4718, Requested 5423. Please try again in 26.. The photo is saved. Hold the box for a manual check."
+        ],
+        "provider": "groq",
+        "model_used": null,
+        "error": "All model attempts failed. qwen/qwen3.6-27b: HTTP 404: {\"error\":{\"message\":\"The model `qwen/qwen3.6-27b` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n | qwen/qwen3.8-27b: HTTP 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01kwnq7hbqezw8mk9h23rwr2ca` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 4718, Requested 5423. Please try again in 26.",
+        "photo_count": 2,
+        "latency_ms": 335
+      }
+    },
+    {
+      "record_id": "PCK-20260930-4311a069",
+      "unit_id": "UNIT-1002",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-260930-002",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-30T16:10:11.247Z",
+      "photo_refs": [
+        "evidence/PCK-20260930-4311a069_1.jpg"
+      ],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0.2,
+      "_meta": {
+        "operator_id": "op_amira",
+        "issues": [
+          "Not seen: USB-C Charging Cable (SKU-CABLE-USBC) - expected 1. The photo (other) cannot prove it is absent.",
+          "Unidentified item in box: \"USB-C to USB-C charging cable\". It is not in the catalogue, so the box cannot be confirmed free of extras.",
+          "Photo quality issue: other."
+        ],
+        "findings": [
+          {
+            "type": "MISSING",
+            "confirmed": false,
+            "expectedSku": "SKU-CABLE-USBC",
+            "expected": 1,
+            "found": 0,
+            "text": "Not seen: USB-C Charging Cable (SKU-CABLE-USBC) - expected 1. The photo (other) cannot prove it is absent."
+          },
+          {
+            "type": "UNIDENTIFIED",
+            "confirmed": false,
+            "found": 1,
+            "text": "Unidentified item in box: \"USB-C to USB-C charging cable\". It is not in the catalogue, so the box cannot be confirmed free of extras."
+          },
+          {
+            "type": "IMAGE_QUALITY",
+            "confirmed": false,
+            "text": "Photo quality issue: other."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 0,
+            "status": "MISSING",
+            "confidence": null
+          }
+        ],
+        "detections": [],
+        "unmapped_detections": [
+          {
+            "name_guess": "USB-C to USB-C charging cable",
+            "quantity": 1,
+            "confidence": 0.9,
+            "evidence": "Black braided cable with two identical USB-C connectors visible at both ends",
+            "box": null,
+            "photo": 1,
+            "sku": null
+          }
+        ],
+        "vision_notes": "No shipping box is visible in the photo; the image shows a product shot of a cable on a white background.",
+        "image_quality_flags": [
+          "other"
+        ],
+        "provider": "groq",
+        "model_used": "qwen/qwen3.8-27b",
+        "reference_images": 0,
+        "usage": {
+          "queue_time": 0.16163753,
+          "prompt_tokens": 3109,
+          "prompt_time": 0.234010331,
+          "completion_tokens": 155,
+          "completion_time": 0.299114802,
+          "total_tokens": 3264,
+          "total_time": 0.533125133
+        },
+        "photo_count": 1,
+        "ai_latency_ms": 939,
+        "latency_ms": 946
+      }
+    },
+    {
+      "record_id": "PCK-20260930-5001e6ce",
+      "unit_id": "UNIT-1002",
+      "org_id": "org_demo_alpha",
+      "order_id": "ORD-260930-002",
+      "channel": "amazon_mfn",
+      "captured_at": "2026-09-30T16:11:10.420Z",
+      "photo_refs": [
+        "evidence/PCK-20260930-5001e6ce_1.jpg"
+      ],
+      "order_lines": "SKU-CABLE-USBC:1",
+      "observed_in_box": "SKU-CABLE-USBC:1",
+      "agent_verdict": "UNCERTAIN",
+      "discrepancy_types": [
+        "VISUAL_AMBIGUITY"
+      ],
+      "checks": {
+        "all_items_present": "UNCERTAIN",
+        "quantities_correct": "UNCERTAIN",
+        "no_extra_items": "UNCERTAIN"
+      },
+      "confidence_score": 0.55,
+      "_meta": {
+        "operator_id": "op_amira",
+        "issues": [
+          "Photo quality issue: other."
+        ],
+        "findings": [
+          {
+            "type": "IMAGE_QUALITY",
+            "confirmed": false,
+            "text": "Photo quality issue: other."
+          }
+        ],
+        "line_items": [
+          {
+            "sku": "SKU-CABLE-USBC",
+            "name": "USB-C Charging Cable",
+            "expectedQty": 1,
+            "detectedQty": 1,
+            "status": "MATCH",
+            "confidence": 0.9
+          }
+        ],
+        "detections": [
+          {
+            "name_guess": "Red USB-C Charging Cable",
+            "quantity": 1,
+            "confidence": 0.9,
+            "evidence": "Red cable with USB-A and USB-C connectors, coiled, with printed text 'SUPERVOOC' and 'DART 100W'",
+            "box": null,
+            "photo": 1,
+            "sku": "SKU-CABLE-USBC"
+          }
+        ],
+        "unmapped_detections": [],
+        "vision_notes": "No open box is visible in the image; the photo appears to be a product shot of a red charging cable on a white background.",
+        "image_quality_flags": [
+          "other"
+        ],
+        "provider": "groq",
+        "model_used": "qwen/qwen3.8-27b",
+        "reference_images": 0,
+        "usage": {
+          "queue_time": 0.131068244,
+          "prompt_tokens": 2597,
+          "prompt_time": 0.211675919,
+          "completion_tokens": 178,
+          "completion_time": 0.349175004,
+          "total_tokens": 2775,
+          "total_time": 0.560850923
+        },
+        "photo_count": 1,
+        "ai_latency_ms": 1022,
+        "latency_ms": 1030
+      }
+    }
+  ],
+  "overrideLog": [],
+  "orders": [
+    {
+      "order_id": "ORD-260930-001",
+      "unit_id": "UNIT-1001",
+      "org_id": "org_demo_alpha",
+      "channel": "shopify",
+      "order_lines": "SKU-TSHIRT-BLK:2;SKU-CAP-BLU:1",
+      "status": "open",
+      "record_id": null,
+      "created_at": "2026-09-30T13:21:34.020Z"
+    },
+    {
+      "order_id": "ORD-260930-002",
+      "unit_id": "UNIT-1002",
+      "org_id": "org_demo_alpha",
+      "channel": "amazon_mfn",
+      "order_lines": "SKU-CABLE-USBC:1",
+      "status": "review",
+      "record_id": "PCK-20260930-5001e6ce",
+      "created_at": "2026-09-30T13:21:34.022Z"
+    },
+    {
+      "order_id": "ORD-260930-003",
+      "unit_id": "UNIT-1003",
+      "org_id": "org_demo_alpha",
+      "channel": "3pl_client",
+      "order_lines": "SKU-CAP-BLU:2",
+      "status": "open",
+      "record_id": null,
+      "created_at": "2026-09-30T13:21:34.023Z"
+    },
+    {
+      "order_id": "ORD-260930-004",
+      "unit_id": "UNIT-1004",
+      "org_id": "org_demo_alpha",
+      "channel": "shopify",
+      "order_lines": "SKU-TSHIRT-BLK:1",
+      "status": "open",
+      "record_id": null,
+      "created_at": "2026-09-30T16:12:26.724Z"
+    },
+    {
+      "order_id": "ORD-260930-005",
+      "unit_id": "UNIT-1005",
+      "org_id": "org_demo_alpha",
+      "channel": "shopify",
+      "order_lines": "SKU-CAP-BLU:1",
+      "status": "open",
+      "record_id": null,
+      "created_at": "2026-09-30T16:12:31.079Z"
+    }
+  ]
+}

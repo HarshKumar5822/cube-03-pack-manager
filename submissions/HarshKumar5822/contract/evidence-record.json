@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PackManagerEvidenceRecord",
+  "type": "object",
+  "required": [
+    "record_id",
+    "timestamp",
+    "order_id",
+    "verdict",
+    "confidence_score",
+    "checks",
+    "discrepancy_types",
+    "findings",
+    "line_items"
+  ],
+  "properties": {
+    "record_id": { "type": "string", "example": "REC-9010" },
+    "timestamp": { "type": "string", "format": "date-time", "example": "2026-09-30T22:00:00Z" },
+    "order_id": { "type": "string", "example": "ORD-1001" },
+    "operator_id": { "type": "string", "example": "OP-42" },
+    "verdict": {
+      "type": "string",
+      "enum": ["SEAL", "STOP_AND_FIX", "UNCERTAIN", "PENDING_REVIEW"]
+    },
+    "confidence_score": { "type": "number", "minimum": 0, "maximum": 1, "example": 0.94 },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "all_items_present": { "type": "string", "enum": ["PASS", "FAIL", "UNCERTAIN"] },
+        "quantities_correct": { "type": "string", "enum": ["PASS", "FAIL", "UNCERTAIN"] },
+        "no_extra_items": { "type": "string", "enum": ["PASS", "FAIL", "UNCERTAIN"] }
+      }
+    },
+    "discrepancy_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["WRONG_ITEM", "MISSING_ITEM", "SHORT_QUANTITY", "EXTRA_ITEM", "VISUAL_AMBIGUITY"]
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "confirmed": { "type": "boolean" },
+          "text": { "type": "string" }
+        }
+      }
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sku": { "type": "string" },
+          "name": { "type": "string" },
+          "expectedQty": { "type": "integer" },
+          "detectedQty": { "type": "integer" },
+          "status": { "type": "string" },
+          "confidence": { "type": ["number", "null"] }
+        }
+      }
+    },
+    "image_quality_flags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "override": {
+      "type": ["object", "null"],
+      "properties": {
+        "original_verdict": { "type": "string" },
+        "new_verdict": { "type": "string" },
+        "reason": { "type": "string" },
+        "timestamp": { "type": "string" }
+      }
+    }
+  }
+}
