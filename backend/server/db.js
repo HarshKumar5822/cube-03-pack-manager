@@ -10,7 +10,14 @@ const emptyState = () => ({ records: [], overrideLog: [], orders: [] });
 
 function load() {
   try {
-    const s = JSON.parse(fs.readFileSync(storePath(), 'utf8'));
+    const sp = storePath();
+    if (!fs.existsSync(sp)) {
+      const seed = path.join(__dirname, '..', 'data', 'store.json');
+      if (fs.existsSync(seed)) {
+        return { ...emptyState(), ...JSON.parse(fs.readFileSync(seed, 'utf8')) };
+      }
+    }
+    const s = JSON.parse(fs.readFileSync(sp, 'utf8'));
     return { ...emptyState(), ...s };
   } catch {
     return emptyState();
@@ -18,11 +25,16 @@ function load() {
 }
 
 function save(state) {
-  fs.mkdirSync(path.dirname(storePath()), { recursive: true });
-  const tmp = `${storePath()}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(state, null, 2));
-  fs.renameSync(tmp, storePath()); // atomic: a crash mid-write cannot corrupt the store
+  try {
+    fs.mkdirSync(path.dirname(storePath()), { recursive: true });
+    const tmp = `${storePath()}.tmp`;
+    fs.writeFileSync(tmp, JSON.stringify(state, null, 2));
+    fs.renameSync(tmp, storePath()); // atomic: a crash mid-write cannot corrupt the store
+  } catch (err) {
+    console.warn('[DB Save Warning]: Could not save store:', err.message);
+  }
 }
+
 
 /**
  * Every read/write takes org_id and filters by it here, in one place - the app-layer stand-in

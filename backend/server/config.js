@@ -8,7 +8,8 @@
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
-const DATA_DIR = process.env.PACK_DATA_DIR || path.join(__dirname, '..', 'data');
+const DATA_DIR = process.env.PACK_DATA_DIR || (process.env.VERCEL ? '/tmp' : path.join(__dirname, '..', 'data'));
+
 
 function num(v, d) {
   const n = parseFloat(v);
