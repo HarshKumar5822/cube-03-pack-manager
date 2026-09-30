@@ -19,10 +19,10 @@ app.use(express.json({ limit: '1mb' }));
 connectMongoDB().catch((err) => console.warn('[Vercel DB Warning]:', err.message));
 
 ['analyze', 'records', 'stats', 'catalogue', 'orders', 'system', 'labels', 'eval'].forEach((r) => {
-  const router = require(`../backend/server/routes/${r}`);
-  app.use('/api', router);
-  app.use('/', router);
+  app.use('/api', require(`../backend/server/routes/${r}`));
 });
+
+app.use('/api', (req, res) => res.status(404).json({ error: `No such API route: ${req.method} ${req.path}` }));
 
 app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   console.error('[Vercel Serverless Error]:', err);
@@ -30,4 +30,3 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
 });
 
 module.exports = app;
-

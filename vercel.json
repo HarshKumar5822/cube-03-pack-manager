@@ -1,12 +1,13 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/:path*",
       "destination": "/api/index.js"
     },
     {
-      "source": "/(.*)",
-      "destination": "/frontend/$1"
+      "source": "/:path*",
+      "destination": "/frontend/:path*"
     }
   ]
 }
