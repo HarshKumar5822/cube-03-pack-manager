@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "pack-manager",
+  "builds": [
+    {
+      "src": "backend/server/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "backend/server/index.js"
+    }
+  ]
+}
