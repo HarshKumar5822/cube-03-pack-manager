@@ -24,18 +24,30 @@ function normalize(i) {
 
 function getCatalogue() {
   try {
-    return JSON.parse(fs.readFileSync(file(), 'utf8')).map(normalize);
+    const f = file();
+    if (!fs.existsSync(f)) {
+      const seed = path.join(__dirname, '..', 'data', 'catalogue.json');
+      if (fs.existsSync(seed)) {
+        return JSON.parse(fs.readFileSync(seed, 'utf8')).map(normalize);
+      }
+    }
+    return JSON.parse(fs.readFileSync(f, 'utf8')).map(normalize);
   } catch {
     return [];
   }
 }
 
 function save(items) {
-  fs.mkdirSync(dir(), { recursive: true });
-  const tmp = `${file()}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(items, null, 2));
-  fs.renameSync(tmp, file());
+  try {
+    fs.mkdirSync(dir(), { recursive: true });
+    const tmp = `${file()}.tmp`;
+    fs.writeFileSync(tmp, JSON.stringify(items, null, 2));
+    fs.renameSync(tmp, file());
+  } catch (err) {
+    console.warn('[Catalogue Save Warning]:', err.message);
+  }
 }
+
 
 function findBySku(sku) {
   return getCatalogue().find((c) => c.sku === sku) || null;
