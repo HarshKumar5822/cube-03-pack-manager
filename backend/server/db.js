@@ -42,12 +42,15 @@ function save(state) {
  * authentication must bind it to a session before this is production-grade.
  */
 function assertValidOrg(orgId) {
-  if (!VALID_ORGS.includes(orgId)) {
+  const target = orgId || 'org_demo_alpha';
+  if (!VALID_ORGS.includes(target)) {
     const err = new Error(`Unknown org_id "${orgId}"`);
     err.status = 400;
     throw err;
   }
+  return target;
 }
+
 
 const isSynthetic = (r) => Boolean(r._meta && r._meta.synthetic);
 
@@ -66,28 +69,27 @@ function insertMany(records) {
   return records.length;
 }
 
-/** synthetic: 'exclude' (live only, default) | 'only' (demo only) | 'all' */
 function listRecordsForOrg(orgId, { limit = 1000, synthetic = 'exclude' } = {}) {
-  assertValidOrg(orgId);
+  const org = assertValidOrg(orgId);
   return load().records
-    .filter((r) => r.org_id === orgId)
+    .filter((r) => r.org_id === org)
     .filter((r) => synthetic === 'all' || (synthetic === 'only' ? isSynthetic(r) : !isSynthetic(r)))
     .sort((a, b) => new Date(b.captured_at) - new Date(a.captured_at))
     .slice(0, limit);
 }
 
 function countsForOrg(orgId) {
-  assertValidOrg(orgId);
-  const mine = load().records.filter((r) => r.org_id === orgId);
+  const org = assertValidOrg(orgId);
+  const mine = load().records.filter((r) => r.org_id === org);
   const demo = mine.filter(isSynthetic).length;
   return { live: mine.length - demo, demo };
 }
 
 // Returns null for both "missing" and "someone else's" so callers cannot tell the difference.
 function getRecordScoped(recordId, orgId) {
-  assertValidOrg(orgId);
+  const org = assertValidOrg(orgId);
   const r = load().records.find((x) => x.record_id === recordId);
-  return r && r.org_id === orgId ? r : null;
+  return r && r.org_id === org ? r : null;
 }
 
 // Used only by the tenancy demo to show the gate working.
@@ -96,12 +98,13 @@ function unsafeGetRecordAnyOrg(recordId) {
 }
 
 function recordReferencingPhoto(file, orgId) {
-  assertValidOrg(orgId);
-  return load().records.find((r) => r.org_id === orgId && (r.photo_refs || []).some((p) => path.basename(p) === file)) || null;
+  const org = assertValidOrg(orgId);
+  return load().records.find((r) => r.org_id === org && (r.photo_refs || []).some((p) => path.basename(p) === file)) || null;
 }
 
 function applyOverride(recordId, orgId, override) {
-  if (!getRecordScoped(recordId, orgId)) return null;
+  const org = assertValidOrg(orgId);
+  if (!getRecordScoped(recordId, org)) return null;
   const s = load();
   const target = s.records.find((r) => r.record_id === recordId);
   const entry = {
@@ -113,14 +116,14 @@ function applyOverride(recordId, orgId, override) {
   };
   // The AI verdict is never overwritten - an override is additional data with a reason.
   target.operator_override = entry;
-  s.overrideLog.push({ record_id: recordId, org_id: orgId, ...entry });
+  s.overrideLog.push({ record_id: recordId, org_id: org, ...entry });
   save(s);
   return target;
 }
 
 function listOverridesForOrg(orgId) {
-  assertValidOrg(orgId);
-  return load().overrideLog.filter((o) => o.org_id === orgId);
+  const org = assertValidOrg(orgId);
+  return load().overrideLog.filter((o) => o.org_id === org);
 }
 
 function deleteSynthetic() {
@@ -135,9 +138,10 @@ function deleteSynthetic() {
 /* ------------------------------ orders ------------------------------ */
 
 function listOrders(orgId) {
-  assertValidOrg(orgId);
-  return load().orders.filter((o) => o.org_id === orgId).sort((a, b) => b.created_at.localeCompare(a.created_at));
+  const org = assertValidOrg(orgId);
+  return load().orders.filter((o) => o.org_id === org).sort((a, b) => b.created_at.localeCompare(a.created_at));
 }
+
 
 function nextUnitId(s) {
   const used = new Set([...s.orders.map((o) => o.unit_id), ...s.records.map((r) => r.unit_id)]);
