@@ -5,7 +5,9 @@
 **Created by Harsh Kumar** ([@HarshKumar5822](https://github.com/HarshKumar5822))
 
 > 📦 **Submission Index & Deliverables:** [submissions/HarshKumar5822/](submissions/HarshKumar5822/README.md)  
-> 📐 **System Architecture:** [ARCHITECTURE.md](ARCHITECTURE.md)
+> 📐 **System Architecture:** [ARCHITECTURE.md](ARCHITECTURE.md)  
+> 🚀 **Live Deployment URL:** [https://cube-03-pack-manager.onrender.com/](https://cube-03-pack-manager.onrender.com/)
+
 
 ---
 

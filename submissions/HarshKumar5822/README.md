@@ -1,9 +1,11 @@
 # Pack Manager
 
 **Created by Harsh Kumar** ([@HarshKumar5822](https://github.com/HarshKumar5822))  
-**Repository:** [https://github.com/HarshKumar5822/cube-03-pack-manager](https://github.com/HarshKumar5822/cube-03-pack-manager)
+**Repository:** [https://github.com/HarshKumar5822/cube-03-pack-manager](https://github.com/HarshKumar5822/cube-03-pack-manager)  
+**Live Deployment URL:** [https://cube-03-pack-manager.onrender.com/](https://cube-03-pack-manager.onrender.com/)
 
 ---
+
 
 
 ### Expected layout
